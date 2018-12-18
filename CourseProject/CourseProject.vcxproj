@@ -111,6 +111,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="borderInputNums.h" />
+    <ClInclude Include="Exception.h" />
+    <ClInclude Include="FindNodeException.h" />
+    <ClInclude Include="InputException.h" />
+    <ClInclude Include="Iterator.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Route.h" />
+    <ClInclude Include="Schedule.h" />
+    <ClInclude Include="Station.h" />
+    <ClInclude Include="Stations.h" />
+    <ClInclude Include="Transport.h" />
+    <ClInclude Include="Transports.h" />
+    <ClInclude Include="Tree.h" />
+    <ClInclude Include="treeNode.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="borderInputNums.cpp" />
+    <ClCompile Include="Iterator.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Schedule.cpp" />
+    <ClCompile Include="Transport.cpp" />
+    <ClCompile Include="Tree.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
