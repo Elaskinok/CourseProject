@@ -224,7 +224,7 @@ bool Menu::User() {
 bool Menu::Admin() {
 	stack<Transports> trStack;
 	while (1) {
-		system("COLOR 43");
+		system("COLOR E4");
 		trStack.push(transports);
 		int choice = borderInputNums(cin, "Choose action:\n1 - Add\n2 - remove\n3 - change\n4 - cancel prev action\n\n5 - return\n\n0 - exit\n\nChoice: ", 0, 5);
 		string tempString;
@@ -250,13 +250,14 @@ bool Menu::Admin() {
 		case 1: //добавление транспорта
 			system("CLS");
 			char buff[80];
-			std::cout << "Enter name of Route: ";
+			std::cout << "Enter name of Route(name must begins from nums): ";
 			cin.ignore(80, '\n');
-			cin.getline(buff, 79);
-			transport.nameOfRoute = string(buff);
-			std::cout << "Enter name of Transport: ";
 			do {
-//				cin.ignore(80, '\n');
+				cin.getline(buff, 79);
+			} while (buff[0] < '0' || buff[0] > '9');
+			transport.nameOfRoute = string(buff);
+			std::cout << "Enter name of Transport(name must begins from nums): ";
+			do {
 				cin.getline(buff, 79);
 			} while (buff[0] < '0' || buff[0] > '9');
 			transport.nameOFTransport = string(buff);

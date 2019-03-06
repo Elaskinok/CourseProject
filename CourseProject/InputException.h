@@ -17,4 +17,5 @@ public:
 	const char* what_code() const {
 		return this->description;
 	}
+	~InputException() {}
 };
